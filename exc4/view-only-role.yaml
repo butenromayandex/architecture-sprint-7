@@ -1,0 +1,8 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: view-only
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "pod/log", "pods/status"]
+    verbs: ["get", "list", "watch"]
